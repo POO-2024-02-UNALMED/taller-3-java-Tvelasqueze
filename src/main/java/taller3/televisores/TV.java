@@ -22,12 +22,12 @@ public class TV {
 	public Marca getMarca () {
 		return this.marca;
 	}
-	public void setCanal(int cambio) {
+	public void setCanal(int ncanal) {
 		if(estado==true) {
-			if(cambio<1 || cambio>120) {
-				return;
+			if(ncanal>1 && ncanal<120) {
+				canal=ncanal;
 			}else {
-				canal=cambio;
+				return;
 			}
 			
 		}else {
@@ -38,20 +38,20 @@ public class TV {
 		return canal;
 		
 	}
-	public void setPrecio(int newp) {
-		precio=newp;
+	public void setPrecio(int nprecio) {
+		precio=nprecio;
 	} 
 	public int getPrecio () {
 		return precio;
 	}
-	public void setVolumen(int vol) {
+	public void setVolumen(int nvolumen) {
 		if (estado==true) {
 			
 		
-			if(vol>7 || vol<0) {
-				return;
+			if(nvolumen<7 && nvolumen>0) {
+				volumen=nvolumen;
 		}	else {
-				volumen=vol;
+				return;
 		}
 		}else {
 			return;
@@ -63,8 +63,8 @@ public class TV {
 		return volumen;
 		
 	}
-	public void setControl(Control newC) {
-		control=newC;
+	public void setControl(Control ncontrol) {
+		control=ncontrol;
 	}
 	public Control getControl() {
 		return control;
